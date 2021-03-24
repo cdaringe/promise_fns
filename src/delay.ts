@@ -4,7 +4,12 @@ export function sleep(ms: number) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
-export default async function delay<U = void>(ms: number, value?: U) {
+function delay<U>(ms: number): Promise<void>;
+function delay<U>(ms: number, value: U): Promise<U>;
+async function delay<U>(ms: number, value?: U) {
   await sleep(ms);
-  return value;
+  if (value) return value;
+  return;
 }
+
+export default delay;
