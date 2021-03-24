@@ -17,5 +17,5 @@ export const tasks: Tasks = {
   ...{ l: lint, lint },
   ...{ f: format, format },
   ...{ t: test, test },
-  ...{ c: check },
+  ...{ c: check, check },
 };

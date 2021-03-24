@@ -5,7 +5,8 @@ Promise utility functions for Deno.
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Inspired by the sindresorhus
-[promise-fun](https://github.com/sindresorhus/promise-fun) collection. Parity with the node `promise-fun` library is not guaranteed.
+[promise-fun](https://github.com/sindresorhus/promise-fun) collection. Parity
+with the node `promise-fun` library is not guaranteed.
 
 **Features**:
 
@@ -15,7 +16,6 @@ Inspired by the sindresorhus
 ## usage
 
 ```ts
-
 ```
 
 ## functions
