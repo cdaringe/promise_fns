@@ -3,13 +3,13 @@
 import { Fn, Unpacked } from "./util/types.ts";
 import { iter, IterOps } from "./util/iter.ts";
 
-export function all<I extends any[], CB extends (it: Unpacked<I>) => any>(
-  collection: I,
-  cb?: CB,
-  opts?: IterOps,
-) {
-  const map = cb || ((i: Unpacked<I>) => i);
-  return iter<any, ReturnType<CB>>(collection, map, opts);
+export function all<
+  I extends any,
+  CB extends (it: I) => any,
+  O = Unpacked<ReturnType<CB>>
+>(collection: I[], cb?: CB, opts?: IterOps) {
+  const map = cb || (((i) => i) as CB);
+  return iter<any, O>(collection, map, opts);
 }
 
 export default all;
