@@ -5,6 +5,9 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    ["@semantic-release/exec", {
+      "prepareCmd": "export NEXT_VERSION=${nextRelease.version} && NEXT_VERSION=${nextRelease.version} rad -l info docs",
+    }],
     ["@semantic-release/git", {
       "assets": ["readme.md"],
       "message": "docs(readme): update docs per ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
