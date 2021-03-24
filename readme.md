@@ -1,4 +1,4 @@
-# promise-fns
+# promise_fns
 
 promise utility functions for Deno.
 
