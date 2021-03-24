@@ -1,16 +1,24 @@
 # promise_fns
 
-promise utility functions for Deno.
+Promise utility functions for Deno.
 
-inspired by the sindresorhus
-[promise-fun](https://github.com/sindresorhus/promise-fun) collection.
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-**features**:
+Inspired by the sindresorhus
+[promise-fun](https://github.com/sindresorhus/promise-fun) collection. Parity with the node `promise-fun` library is not guaranteed.
+
+**Features**:
 
 - each function is independently importable
 - all APIs are type-safe first
 
-1:1 functionality is not guaranteed with `promise-fun` node library.
+## usage
+
+```ts
+
+```
+
+## functions
 
 <!-- LINKS-START -->
 <!-- this table is auto-generated. see .rad/docs.ts -->
