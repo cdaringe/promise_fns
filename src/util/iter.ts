@@ -3,7 +3,7 @@ export type IterOps = IterOpInOrder & IterOpConcurrency;
 export type IterOpInOrder = { inOrder?: boolean };
 export type IterOpConcurrency = { concurrency?: number };
 
-export type PCallback<I, O> = (input: I, i: number) => Promise<O>;
+export type PCallback<I, O> = (input: I, i: number) => O | Promise<O>;
 
 type LimitWip<O> = Map<number, Promise<O | Error>>;
 
@@ -31,7 +31,7 @@ export function iter<I, O>(
         const it = toProcess.shift()!;
         wip.set(
           idx,
-          cb(it, idx).then(
+          Promise.resolve(cb(it, idx)).then(
             (res) => {
               ok[idx] = res;
               ++okCount;

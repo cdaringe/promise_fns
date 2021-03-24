@@ -1,5 +1,6 @@
+// maps a { key:promise } mapped collection to a { key:resolved-promise } mapped collection
 // deno-lint-ignore-file no-explicit-any
-import { Unpacked } from "./types.ts";
+import { Unpacked } from "./util/types.ts";
 
 export async function props<T extends { [key: string]: Promise<any> }>(
   keyPromiseMap: T,

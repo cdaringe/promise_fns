@@ -1,5 +1,7 @@
+// converts a node-style callback function into a promisified function, returning all results after `err`, per `(err, ...results) => void`
+
 // deno-lint-ignore-file no-explicit-any
-import { Body, FnWithCb, Last, Tail } from "./types.ts";
+import { Body, FnWithCb, Last, Tail } from "./util/types.ts";
 
 export default function promisifyMulti<T extends FnWithCb>(toPromisify: T) {
   type Cb = Last<Parameters<T>>;

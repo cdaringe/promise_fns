@@ -1,16 +1,15 @@
+// resolve an eager or lazy collection of promises
 // deno-lint-ignore-file no-explicit-any
-import { Unpacked } from "./types.ts";
-import { iter, IterOps, PCallback } from "./iter.ts";
+import { Fn, Unpacked } from "./util/types.ts";
+import { iter, IterOps } from "./util/iter.ts";
 
-export function all<
-  T extends Promise<any>[],
-  CB extends PCallback<any, any>,
-  O = Unpacked<Unpacked<CB>>,
->(
-  collection: T,
+export function all<I extends any[], CB extends (it: Unpacked<I>) => any>(
+  collection: I,
+  cb?: CB,
   opts?: IterOps,
 ) {
-  return iter<any, O>(collection, (i) => i, opts);
+  const map = cb || ((i: Unpacked<I>) => i);
+  return iter<any, ReturnType<CB>>(collection, map, opts);
 }
 
 export default all;

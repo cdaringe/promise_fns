@@ -1,0 +1,13 @@
+{
+  "branches": [
+    {name: "main"},
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/git", {
+      "assets": ["readme.md"],
+      "message": "docs(readme): update docs per ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }]
+  ]
+}
