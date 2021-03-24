@@ -49,7 +49,7 @@ Deno.test({
       assertArrayIncludes(
         [0, 1, 2],
         [count],
-        `${count} active workers. expected only 2`
+        `${count} active workers. expected only 2`,
       );
       await sleep(v);
       --count;

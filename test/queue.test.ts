@@ -15,7 +15,7 @@ Deno.test({
     assertEquals(result, undefined);
     assertEquals(
       emittedResults,
-      /* concurrency 2 allowed 2 to emit before 10 */ [0, 2, 10]
+      /* concurrency 2 allowed 2 to emit before 10 */ [0, 2, 10],
     );
   },
 });
@@ -34,7 +34,7 @@ Deno.test({
     assertEquals(result, undefined);
     assertEquals(
       emittedResults,
-      /* queue has already resolved due to delay */ []
+      /* queue has already resolved due to delay */ [],
     );
   },
 });

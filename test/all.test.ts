@@ -37,7 +37,7 @@ Deno.test({
   async fn() {
     const results = await all(
       createXyz(),
-      async (asyncChar) => `${await asyncChar}_lazy`
+      async (asyncChar) => `${await asyncChar}_lazy`,
     );
     assertEquals(results, ["x_lazy", "y_lazy", "z_lazy"]);
   },

@@ -5,7 +5,7 @@ import { iter, IterOps, PCallback } from "./util/iter.ts";
 export function map<I, CB extends PCallback<I, O>, O = Unpacked<Unpacked<CB>>>(
   collection: I[],
   cb: CB,
-  opts?: IterOps
+  opts?: IterOps,
 ) {
   return iter<I, O>(collection, cb, opts);
 }

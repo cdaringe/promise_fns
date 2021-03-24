@@ -20,7 +20,7 @@ export default function createQueue<O = unknown>(opts: CreateQueueOptions) {
         emit(result);
         return result;
       },
-      opts
+      opts,
     );
     toProcess = toProcess.slice(processed.length);
     if (toProcess.length) return awaitQueueSettled();
