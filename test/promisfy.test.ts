@@ -18,7 +18,7 @@ Deno.test({
   async fn() {
     const testFn = (
       a: number,
-      cb: (err: undefined | null | Error, a0?: number, a1?: string) => void,
+      cb: (err: undefined | null | Error, a0: number, a1?: string) => void
     ) => cb(null, a + 1, "test_string");
     const testFnP = promisify(testFn);
     const res = await testFnP(3);

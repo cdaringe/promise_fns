@@ -7,7 +7,8 @@ import {
 Deno.test({
   name: "map - base",
   async fn() {
-    const res = await map([], (it, i) => Promise.resolve(it + i));
+    const mapper = (it: number, i: number) => it + i;
+    const res = await map([], mapper);
     assertEquals(res, []);
   },
 });
@@ -17,6 +18,14 @@ Deno.test({
   async fn() {
     const res = await map([1, 2, 3], (it, i) => Promise.resolve(it + i));
     assertEquals(res, [1, 3, 5]);
+  },
+});
+
+Deno.test({
+  name: "map - IO type change",
+  async fn() {
+    const res = await map([1, 2], String);
+    assertEquals(res, ["1", "2"]);
   },
 });
 
@@ -40,7 +49,7 @@ Deno.test({
       assertArrayIncludes(
         [0, 1, 2],
         [count],
-        `${count} active workers. expected only 2`,
+        `${count} active workers. expected only 2`
       );
       await sleep(v);
       --count;

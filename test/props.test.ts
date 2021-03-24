@@ -20,3 +20,13 @@ Deno.test({
     assertEquals(res, { a });
   },
 });
+
+Deno.test({
+  name: "props - multi-key",
+  async fn() {
+    const a = "a";
+    const res = await props({ a: Promise.resolve(a), b: Promise.resolve(2) });
+    assertEquals(res.b, 2);
+    assertEquals(res.a, a);
+  },
+});

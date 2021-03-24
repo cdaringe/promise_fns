@@ -6,9 +6,9 @@ export type CreateQueueOptions = IterOps;
 
 export default function createQueue<O = unknown>(opts: CreateQueueOptions) {
   type Work = () => Promise<O>;
-  type OnEmit = (output: O) => void;
-  const subscribers: OnEmit[] = [];
-  const subscribe = (cb: OnEmit) => subscribers.push(cb);
+  type SubcriptionEventHandler = (output: O) => void;
+  const subscribers: SubcriptionEventHandler[] = [];
+  const subscribe = (cb: SubcriptionEventHandler) => subscribers.push(cb);
   const emit = (o: O) => subscribers.forEach((subscriber) => subscriber(o));
   let toProcess: Work[] = [];
 
@@ -20,7 +20,7 @@ export default function createQueue<O = unknown>(opts: CreateQueueOptions) {
         emit(result);
         return result;
       },
-      opts,
+      opts
     );
     toProcess = toProcess.slice(processed.length);
     if (toProcess.length) return awaitQueueSettled();
