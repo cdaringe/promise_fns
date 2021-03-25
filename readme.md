@@ -12,7 +12,9 @@ with the node `promise-fun` library is not guaranteed.
 **Features**:
 
 - each function is independently importable
-- all APIs are type-safe first
+- all typesafe, type reflecting APIs
+- debuggable. simplified source, named functions (so your stack trace is
+  legible!)
 
 ## usage
 

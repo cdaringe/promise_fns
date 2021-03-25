@@ -1,4 +1,4 @@
-import promisifyMulti from "../src/promisify-multi.ts";
+import promisifyMulti from "../src/promisifyMulti.ts";
 import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
 import { writeFileCb } from "./fixture/promisify-cbs.ts";
 
