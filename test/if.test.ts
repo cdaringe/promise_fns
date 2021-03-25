@@ -10,8 +10,8 @@ Deno.test({
       pIf(
         true,
         () => "if",
-        () => "else"
-      )
+        () => "else",
+      ),
     );
     assertEquals(value, "if");
   },
@@ -24,8 +24,8 @@ Deno.test({
       pIf(
         false,
         () => "if",
-        () => "else"
-      )
+        () => "else",
+      ),
     );
     assertEquals(value, "else");
   },
@@ -48,9 +48,9 @@ Deno.test({
         pIf(
           false,
           () => "if",
-          () => "else"
-        )
-      )
+          () => "else",
+        ),
+      ),
     );
     assertEquals(value, "else");
   },
@@ -62,11 +62,11 @@ Deno.test({
     const isEmpty = (array: unknown[]) => array.length === 0;
 
     const valueA = await Promise.resolve([]).then(
-      pIf(isEmpty, (array) => array.concat(42))
+      pIf(isEmpty, (array) => array.concat(42)),
     );
 
     const valueB = await Promise.resolve([1]).then(
-      pIf(isEmpty, (array) => array.concat(42))
+      pIf(isEmpty, (array) => array.concat(42)),
     );
 
     assertEquals(valueA, [42]);
@@ -80,15 +80,15 @@ Deno.test({
     const valueA = await Promise.resolve([] as number[]).then(
       pIf(
         async () => await true,
-        (array) => array.concat(42)
-      )
+        (array) => array.concat(42),
+      ),
     );
 
     const valueB = await Promise.resolve([1]).then(
       pIf(
         async () => await false,
-        (array) => array.concat(42)
-      )
+        (array) => array.concat(42),
+      ),
     );
 
     assertEquals(valueA, [42]);
