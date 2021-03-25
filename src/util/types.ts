@@ -4,9 +4,6 @@ export type Unpacked<T> = T extends (infer U)[] ? U
   : T extends Promise<infer U> ? U
   : T;
 
-// export type Body<T> = T extends [...infer Head, infer _TlEl] ? Head : never;
-// export type Tail<T> = T extends [...infer _I, infer L] ? L : never;
-
 export type Head<T> = T extends [infer Head, ...infer _Tail] ? Head : never;
 export type Tail<T> = T extends [infer _Head, ...infer Tail] ? Tail : never;
 export type Body<T> = T extends [...infer B, infer L] ? B : never;

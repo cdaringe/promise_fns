@@ -2,6 +2,6 @@
 export default function isErrorConstructor(constructor: any) {
   return (
     constructor === Error ||
-    ("prototype" in constructor && constructor.prototype instanceof Error)
+    (constructor !== undefined && constructor.prototype instanceof Error)
   );
 }
