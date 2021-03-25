@@ -18,7 +18,7 @@ export const docs: Task = {
       .sort((a, b) => (a.name < b.name ? -1 : 1));
     const oldReadmeContent = await Deno.readTextFile(readmeFilename);
     const [pre, post] = oldReadmeContent.split(
-      /<!-- LINKS-START[.\s\S]*LINKS-END -->/g
+      /<!-- LINKS-START[.\s\S]*LINKS-END -->/g,
     );
     await Deno.writeTextFile(
       readmeFilename,
@@ -28,15 +28,17 @@ export const docs: Task = {
 <!-- this table is auto-generated. see .rad/docs.ts -->
 | function | description | links |
 | --- | --- | --- |
-${functionsMeta
-  .map(
-    ({ filename, description, name }) =>
-      `| \`${name}\` | ${description} | [src](./src/${filename}) [test](./test/${name}.test.ts) |`
-  )
-  .join("\n")}
+${
+          functionsMeta
+            .map(
+              ({ filename, description, name }) =>
+                `| \`${name}\` | ${description} | [src](./src/${filename}) [test](./test/${name}.test.ts) |`,
+            )
+            .join("\n")
+        }
 <!-- LINKS-END -->`,
         post,
-      ].join("\n")
+      ].join("\n"),
     );
     await sh(`rad format`);
   },
