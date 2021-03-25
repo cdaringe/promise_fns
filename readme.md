@@ -13,6 +13,7 @@ with the node `promise-fun` library is not guaranteed.
 
 - each function is independently importable
 - all typesafe, type reflecting APIs
+- concurrency control for most collection iterating functions
 - debuggable. simplified source, named functions (so your stack trace is
   legible!)
 
