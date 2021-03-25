@@ -48,11 +48,15 @@ console.log(1 + delayedTwo); // 3
 | delay          | create a promise that sleeps for some milliseconds then resolves                                                                        | [src](./src/delay.ts) [test](./test/delay.test.ts)                   |
 | delayReject    | create a promise that sleeps for some milliseconds then rejects                                                                         | [src](./src/delayReject.ts) [test](./test/delayReject.test.ts)       |
 | if             | Conditional promise chains                                                                                                              | [src](./src/if.ts) [test](./test/if.test.ts)                         |
+| log            | Log the resolved value of a promise                                                                                                     | [src](./src/log.ts) [test](./test/log.test.ts)                       |
+| logCatch       | Log the rejected value of a promise                                                                                                     | [src](./src/logCatch.ts) [test](./test/logCatch.test.ts)             |
 | map            | maps a collection into a new collection asynchronously                                                                                  | [src](./src/map.ts) [test](./test/map.test.ts)                       |
 | promisify      | converts a node-style callback function into a promisified function, returning the result after `err`, per `(err, result) => void`      | [src](./src/promisify.ts) [test](./test/promisify.test.ts)           |
 | promisifyMulti | converts a node-style callback function into a promisified function, returning all results after `err`, per `(err, ...results) => void` | [src](./src/promisifyMulti.ts) [test](./test/promisifyMulti.test.ts) |
 | props          | maps a { key:promise } mapped collection to a { key:resolved-promise } mapped collection                                                | [src](./src/props.ts) [test](./test/props.test.ts)                   |
 | queue          | creates a queue that allows users to add work. queue resolves when no work is outstanding                                               | [src](./src/queue.ts) [test](./test/queue.test.ts)                   |
+| tap            | Tap into a resolving promise chain without affecting the resolved value                                                                 | [src](./src/tap.ts) [test](./test/tap.test.ts)                       |
+| tapCatch       | Tap into a rejecting promise chain without affecting the rejected value                                                                 | [src](./src/tapCatch.ts) [test](./test/tapCatch.test.ts)             |
 
 <!-- LINKS-END -->
 
