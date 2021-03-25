@@ -3,7 +3,7 @@ import { path, Task } from "./3p.ts";
 const readmeFilename = Deno.realPathSync("./readme.md");
 
 export const docs: Task = {
-  async fn({ logger }) {
+  async fn({ sh, logger }) {
     logger.info(`updating readme`);
     const filenamesRaw = Deno.readDirSync(await Deno.realPath("src"));
     const functionsMeta = [...filenamesRaw]
@@ -40,5 +40,6 @@ ${
         post,
       ].join("\n"),
     );
+    await sh(`rad format`);
   },
 };
