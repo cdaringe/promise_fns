@@ -1,5 +1,5 @@
 import { docs, Task, Tasks } from "./.rad/mod.ts";
-const format: Task = `deno fmt`;
+const format: Task = `deno fmt --unstable --ignore=node_modules`;
 const test: Task = `deno test -A`;
 const lint: Task = `deno lint --unstable`;
 const check: Task = {
