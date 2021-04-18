@@ -1,6 +1,5 @@
-// resolve an eager or lazy collection of promises
 // deno-lint-ignore-file no-explicit-any
-import { Fn, Unpacked } from "./util/types.ts";
+import { Unpacked } from "./util/types.ts";
 import { iter, IterOps } from "./util/iter.ts";
 
 export function all<

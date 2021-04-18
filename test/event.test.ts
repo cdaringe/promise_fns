@@ -1,4 +1,4 @@
-import { EventEmitter } from "https://deno.land/x/event/mod.ts";
+import { EventEmitter } from "./fixture/3p.ts";
 import event from "../src/event.ts";
 import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
 
