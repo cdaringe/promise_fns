@@ -1,4 +1,3 @@
-// maps a collection into a new collection asynchronously
 import { Unpacked } from "./util/types.ts";
 import { iter, IterOps, PCallback } from "./util/iter.ts";
 

@@ -19,9 +19,10 @@ You're awesome. Thank you!
 
 - If adding a new function:
 
-  - add `src/<functionName>.ts`. the first line in this file should be a
-    description, which CI will auto-add to the readme.md table
-  - add `test/<functionName>.ts`
+  - add `src/<functionName>.ts`
+  - add `test/<functionName>.test.ts`
+  - add short docs and a concise example to the `readme.md`
+  - run `rad docs` to ensure your readme snippet can execute
 
 - write tests.
 - run the tests, `rad test`

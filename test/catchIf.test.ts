@@ -1,8 +1,5 @@
 import catchIf from "../src/catchIf.ts";
-import {
-  assertEquals,
-  assertThrowsAsync,
-} from "https://deno.land/std@0.90.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
 
 const fixture = Symbol("fixture");
 const fixtureError = new Error("fixture");

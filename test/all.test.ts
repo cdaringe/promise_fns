@@ -23,22 +23,3 @@ Deno.test({
     assertEquals(results, ["x", "y", "z"]);
   },
 });
-
-Deno.test({
-  name: "all - lazy, sync collection mapper",
-  async fn() {
-    const results = await all(["x", "y", "z"], (char) => `${char}_lazy`);
-    assertEquals(results, ["x_lazy", "y_lazy", "z_lazy"]);
-  },
-});
-
-Deno.test({
-  name: "all - lazy, async collection mapper",
-  async fn() {
-    const results = await all(
-      createXyz(),
-      async (asyncChar) => `${await asyncChar}_lazy`,
-    );
-    assertEquals(results, ["x_lazy", "y_lazy", "z_lazy"]);
-  },
-});
