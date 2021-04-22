@@ -45,7 +45,7 @@ resolve a collection of promises. it's just
 
 [src](./src/all.ts) [test](./test/all.test.ts)
 
-```ts {group: demo, file: {name: "readme.ts", autoRemove: false}}
+```ts {group: demo, file: {name: "readme.ts", autoRemove: true}}
 // eager
 import all from "./src/all.ts";
 console.log(await all([countFiles("."), testIsFile("readme.md")]));
@@ -131,11 +131,11 @@ await all([delayReject5, delayReject1, delayReject3]);
 
 ```txt {skipRun: true, isExecutionOutput: true}
 Error: 1
-    at file:///home/cdaringe/src/promise-fns/readme.ts:20:37
+    at file:///Users/cdaringe/src/promise_fns/readme.ts:20:37
 Error: 3
-    at file:///home/cdaringe/src/promise-fns/readme.ts:21:37
+    at file:///Users/cdaringe/src/promise_fns/readme.ts:21:37
 Error: 5
-    at file:///home/cdaringe/src/promise-fns/readme.ts:19:37
+    at file:///Users/cdaringe/src/promise_fns/readme.ts:19:37
 ```
 
 ### event
@@ -216,7 +216,7 @@ await Promise.reject(new Error("something terrible has happened"))
 
 ```txt {skipRun: true, isExecutionOutput: true}
 Error: something terrible has happened
-    at file:///home/cdaringe/src/promise-fns/readme.ts:43:22
+    at file:///Users/cdaringe/src/promise_fns/readme.ts:43:22
 ```
 
 ### map

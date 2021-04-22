@@ -1,4 +1,4 @@
-// maps a collection into a new collection asynchronously
+// deno-lint-ignore-file no-explicit-any
 import { Unpacked } from "./util/types.ts";
 import { iter, IterOps } from "./util/iter.ts";
 import all from "./all.ts";

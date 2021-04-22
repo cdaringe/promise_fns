@@ -1,8 +1,5 @@
 import props from "../src/props.ts";
-import {
-  assertArrayIncludes,
-  assertEquals,
-} from "https://deno.land/std@0.90.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
 
 Deno.test({
   name: "props - base",
