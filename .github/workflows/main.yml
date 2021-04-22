@@ -25,6 +25,9 @@ jobs:
       - name: install-rad
         run: deno install --unstable -f -A -n rad https://raw.githubusercontent.com/cdaringe/rad/v6.3.6/src/bin.ts
 
+      - name: rad-version
+        run: rad --version
+
       - name: check
         run: rad -l info check
 
