@@ -52,7 +52,7 @@ console.log(await all([countFiles("."), testIsFile("readme.md")]));
 ```
 
 ```txt {skipRun: true, isExecutionOutput: true}
-[ 13, true ]
+[ 16, true ]
 ```
 
 ### allLazy
@@ -131,11 +131,11 @@ await all([delayReject5, delayReject1, delayReject3]);
 
 ```txt {skipRun: true, isExecutionOutput: true}
 Error: 1
-    at file:///home/cdaringe/src/promise-fns/readme.ts:20:37
+    at file:///home/runner/work/promise_fns/promise_fns/readme.ts:20:37
 Error: 3
-    at file:///home/cdaringe/src/promise-fns/readme.ts:21:37
+    at file:///home/runner/work/promise_fns/promise_fns/readme.ts:21:37
 Error: 5
-    at file:///home/cdaringe/src/promise-fns/readme.ts:19:37
+    at file:///home/runner/work/promise_fns/promise_fns/readme.ts:19:37
 ```
 
 ### event
@@ -216,7 +216,7 @@ await Promise.reject(new Error("something terrible has happened"))
 
 ```txt {skipRun: true, isExecutionOutput: true}
 Error: something terrible has happened
-    at file:///home/cdaringe/src/promise-fns/readme.ts:43:22
+    at file:///home/runner/work/promise_fns/promise_fns/readme.ts:43:22
 ```
 
 ### map
@@ -338,7 +338,7 @@ await countFiles(".").then(tap((n) => console.log(`found ${n} files`)));
 ```
 
 ```txt {skipRun: true, isExecutionOutput: true}
-found 13 files
+found 16 files
 ```
 
 ### tapCatch
