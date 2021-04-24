@@ -39,7 +39,7 @@ with the node `promise-fun` library is not guaranteed.
   - [queue](#queue)
   - [tap](#tap)
   - [tapCatch](#tapcatch)
-    - [Demo support functions](#demo-support-functions)
+- [Demo support functions](#demo-support-functions)
 - [contributing](#contributing)
 
 <!-- tocstop -->
@@ -387,7 +387,7 @@ count files failed, but its all good
 
 **More functions are on their way!**
 
-#### Demo support functions
+## Demo support functions
 
 The demo functions used in the above demos are defined as follows:
 
