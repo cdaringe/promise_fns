@@ -17,6 +17,33 @@ with the node `promise-fun` library is not guaranteed.
 - debuggable. simplified source, named functions (so your stack trace is
   legible!)
 
+## Table Of Contents
+
+<!-- toc -->
+
+- [Usage](#usage)
+- [Functions](#functions)
+  - [all](#all)
+  - [allLazy](#alllazy)
+  - [catchIf](#catchif)
+  - [delay](#delay)
+  - [delayReject](#delayreject)
+  - [event](#event)
+  - [if](#if)
+  - [log](#log)
+  - [logCatch](#logcatch)
+  - [map](#map)
+  - [promisify](#promisify)
+  - [promisifyMulti](#promisifymulti)
+  - [props](#props)
+  - [queue](#queue)
+  - [tap](#tap)
+  - [tapCatch](#tapcatch)
+    - [Demo support functions](#demo-support-functions)
+- [contributing](#contributing)
+
+<!-- tocstop -->
+
 ## Usage
 
 You can import any individual function as follows:

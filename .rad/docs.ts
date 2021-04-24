@@ -8,6 +8,7 @@ export const docs: Task = {
     await markdownPlayer.playFile(readmeFilename, {
       appendOutput: true,
     });
+    await sh(`npx markdown-toc -i readme.md`);
     await sh(`rad format`);
   },
 };
