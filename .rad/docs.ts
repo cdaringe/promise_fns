@@ -1,4 +1,4 @@
-import { Task, markdownPlayer } from "./3p.ts";
+import { markdownPlayer, Task } from "./3p.ts";
 
 const readmeFilename = Deno.realPathSync("./readme.md");
 
