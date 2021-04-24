@@ -1,1 +1,1 @@
-export { EventEmitter } from "https://deno.land/x/event/mod.ts";
+export { EventEmitter } from "https://deno.land/x/event@1.0.0/mod.ts";
